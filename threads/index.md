@@ -14,10 +14,7 @@
  Each visitor / HTTP request is handled by a seperate thread, simulataneously. 
  So multiple visitors can access the web server at the same time.  
 3. used to optimize performance in general  
- When u have multiple CPU cores, different threads can run on different CPU cores at the same time.
+ When u have multiple CPU cores, different threads can run on different CPU cores at the same time.  
+
 ## Code
-1. testing
-2. some
-- things
-3. lets see
 ## Edge Cases
