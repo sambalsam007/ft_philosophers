@@ -1,5 +1,5 @@
-#include
-int 	main(void)
-{
-	some code;
-}
+#include 
+int 	main(void) 
+{  
+	some code;  
+}  
