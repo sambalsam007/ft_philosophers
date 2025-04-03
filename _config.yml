@@ -1,0 +1,5 @@
+theme: jekyll-theme-minima
+markdown: kramdown
+kramdown:
+  syntax_highlighter: rouge
+

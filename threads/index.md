@@ -17,7 +17,7 @@ Each HTTP request (visitor) is handled by a seperate thread, simulataneously. So
 When u have multiple CPU cores, different threads can run on different CPU cores at the same time. Things get done faster.
 
 ## Basics
-```
+```c
 #include <stdio.h> // printf
 #include <pthread.h> // pthread_*
 
@@ -48,7 +48,7 @@ thread executes a function.
 ## Edge Cases
 Error handling. 
 pthread_create returns an error code to tell which specific error there is.
-```
+```c
 int result;
 if ((result = pthread_create(...)) != 0)
 {
