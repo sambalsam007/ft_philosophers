@@ -1,7 +1,7 @@
 # RACE CONDITIONS
 when multiple threads try to access shared data, at same time.  
 other term
-    :synchronization issue
+: synchronization issue
 ## Demonstration
 ```c
 #include <unistd.h> //write
@@ -39,12 +39,12 @@ int	main(void)
 }
 ```
 the output should be:  
->DIT IS EEN MOOIE ZIN  
+>**DIT IS EEN MOOIE ZIN**  
 >que sera sera whatever will be.  
 
 
 but the output will be:  
->qDuITe  IsSer aEE Ns eMraO OIwEh aZtIeNv  
+>q**D**u**IT**e  **I**s**S**er a**EE** **N**s e**M**ra**O** **OI**w**E**h a**Z**t**I**e**N**v  
 >er will be.  
 
 the computer is trying to "type" the 2 sentences at the same time,  
