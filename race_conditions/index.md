@@ -1,7 +1,5 @@
 # RACE CONDITIONS
 when multiple threads try to access shared data, at same time.  
-other term
-: synchronization issue
 ## Demonstration
 ```c
 #include <unistd.h> //write
