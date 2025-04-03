@@ -16,7 +16,7 @@ Each HTTP request (visitor) is handled by a seperate thread, simulataneously. So
 ### Optimizing performance.
 When u have multiple CPU cores, different threads can run on different CPU cores at the same time. Things get done faster.
 
-## Code
+## Basics
 ```
 #include <stdio.h> // printf
 #include <pthread.h> // pthread_*
@@ -46,3 +46,20 @@ program creates 1 thread.
 thread executes a function.  
 `pthread_join()` tells the main thread to wait for cool_thread to finish.
 ## Edge Cases
+Error handling. 
+pthread_create returns an error code to tell which specific error there is.
+```
+int result;
+if ((result = pthread_create(...)) != 0)
+{
+    printf("error creating thread: %d\n", result);
+    return 1;
+}
+
+if (pthread_join(...) != 0)
+{
+    printf("error joining thread\n");
+    return 1;
+}
+```
+[race conditions](), [deadlock]().
