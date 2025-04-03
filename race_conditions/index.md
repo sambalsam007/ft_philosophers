@@ -110,4 +110,5 @@ change the position of `pthread_join`
 ```
 
 ### 2. Mutex
+[chatgpt](https://chatgpt.com/c/67eea9be-b728-800f-8e5b-fafdd8c6e115)
 ...

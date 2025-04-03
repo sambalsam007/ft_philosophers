@@ -13,4 +13,4 @@ while [ $NBR -lt 100 ]; do
 	echo $OUTPUT | grep 0 &>/dev/null && echo "--found a zero" && FOUND_ZERO=1 && break
 	((NBR++))
 done
-[[ ! "$FOUND_ZERO" ]] && echo "try again"
+[[ "$FOUND_ZERO" == 0 ]] && echo "try again"
