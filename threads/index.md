@@ -45,8 +45,7 @@ int	main(void)
 program creates 1 thread.  
 thread executes a function.  
 `pthread_join()` tells the main thread to wait for cool_thread to finish.
-## Edge Cases
-Error handling. 
+## Error handling
 pthread_create returns an error code to tell which specific error there is.
 ```c
 int result;
@@ -62,4 +61,5 @@ if (pthread_join(...) != 0)
     return 1;
 }
 ```
+## Edge Cases
 [race conditions](../race_conditions), [deadlocks](../deadlocks).
