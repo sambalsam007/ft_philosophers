@@ -62,4 +62,4 @@ if (pthread_join(...) != 0)
     return 1;
 }
 ```
-[race conditions](), [deadlock]().
+[race conditions](../race_conditions), [deadlock](../deadlock).
