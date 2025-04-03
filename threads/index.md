@@ -1,6 +1,7 @@
 # THREADS
 ## Single threading (normal)
 <img src="single_threading.jpeg" style="width:100%;"/>
+![](single_threading.jpeg =200x)
 
 ## Multi threading 
 Used for doing multiple things at the **same time**.
