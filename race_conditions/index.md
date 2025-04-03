@@ -55,3 +55,4 @@ one thread (producer) writes data,
 another thread (consumer) reads it.  
 if the consumer reads before the producer writes,  
 they will get wrong data.
+![](producer_consumer.jpeg)
