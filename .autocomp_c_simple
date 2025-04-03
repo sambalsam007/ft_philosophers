@@ -1,0 +1,50 @@
+#!/bin/bash
+
+DO_VALGRIND=0
+SOURCES="$1"
+ARGUMENT="$2"
+OUTPUT="${SOURCES/.c/.out}"
+
+lets_compile() {
+	cc "$SOURCES" -o "$OUTPUT"
+}
+lets_execute() {
+	./$OUTPUT "$ARGUMENT"
+}
+lets_valgrind() {
+	LOG_VAL="$TEMPDIR/valg.log.$NEW_MOD"
+	valgrind --leak-check=full \
+			--show-leak-kinds=all \
+			--track-origins=yes \
+			./$OUTPUT &> "$LOG_VAL"
+	grep "no leaks" "$LOG_VAL"
+	if [[ "$?" == 0 ]]; then
+		lets_execute
+	else
+		cat "$LOG_VAL"
+	fi
+}
+lets_cleanup() {
+	rm -r "$TEMPDIR"
+	exit
+}
+
+TIMESTAMP=$(date "+%s")
+TEMPDIR="temp_files_$TIMESTAMP"
+mkdir -p "$TEMPDIR"
+OLD_MOD=0
+while true; do
+	for SRC in "${SOURCES[@]}"; do
+		NEW_MOD=$(stat -c %Y "$SRC")
+		if [[ "$NEW_MOD" > "$OLD_MOD" ]]; then
+			OLD_MOD=$NEW_MOD
+			clear
+			lets_compile
+			if [[ "$?" == 0 ]];then
+				[[ "$DO_VALGRIND" == 1 ]] && lets_valgrind
+				[[ "$DO_VALGRIND" == 0 ]] && lets_execute
+			fi
+		fi
+	done
+	read -t 2 && lets_cleanup
+done

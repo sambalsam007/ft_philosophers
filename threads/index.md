@@ -17,4 +17,32 @@ Each HTTP request (visitor) is handled by a seperate thread, simulataneously. So
 When u have multiple CPU cores, different threads can run on different CPU cores at the same time. Things get done faster.
 
 ## Code
+```
+#include <stdio.h> // printf
+#include <pthread.h> // pthread_*
+
+// thread function
+void	*function(void *arg)
+{
+	printf("waddup\n");
+	return NULL;
+}
+
+int	main(void)
+{
+	// declare a thread identifier
+	pthread_t	cool_thread;
+
+	// create a thread
+	pthread_create(&cool_thread, NULL, function, NULL);
+
+	// wait for thread to finish
+	pthread_join(cool_thread, NULL);
+
+	return 0;
+}
+```
+program creates 1 thread.  
+thread executes a function.  
+`pthread_join()` tells the main thread to wait for cool_thread to finish.
 ## Edge Cases
