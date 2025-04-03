@@ -38,6 +38,7 @@ int	main(void)
 the output will be:  
 >qDuITe  IsSer aEE Ns eMraO OIwEh aZtIeNv  
 >er will be.  
+
 the computer is trying to "type" the 2 sentences at the same time,  
 which results in the scrambled mess.
 
