@@ -1,0 +1,44 @@
+# RACE CONDITIONS
+## Demonstration
+```c
+#include <unistd.h> //write
+#include <pthread.h> //pthread_...
+
+void	delayed_putstr(char *str)
+{
+	while (*str)
+	{
+		write(1, &*str, 1);
+		str++;
+		usleep(100000);
+	}
+}
+
+void	*slow_typewriter(void *arg)
+{
+	char *str = (char *)arg;
+	delayed_putstr(str);
+
+	return NULL;
+}
+
+int	main(void)
+{
+	pthread_t	thread_1;
+	pthread_t	thread_2;
+
+	pthread_create(&thread_1, NULL, slow_typewriter, "DIT IS EEN MOOIE ZIN\n");
+	pthread_create(&thread_2, NULL, slow_typewriter, "que sera sera whatever will be.\n");
+	pthread_join(thread_1, NULL);
+	pthread_join(thread_2, NULL);
+
+	return 0;
+}
+```
+the output will be:  
+>qDuITe  IsSer aEE Ns eMraO OIwEh aZtIeNv  
+>er will be.  
+the computer is trying to "type" the 2 sentences at the same time,  
+which results in the scrambled mess.
+
+Real world problem situation: when multiple threads try to access same data.  

@@ -6,4 +6,7 @@ If I made a mistake, please let me know in the [issues tab](https://github.com/s
 - [x] [threads](threads)
 - [ ] [race conditions](race_conditions)
 - [ ] [deadlocks](deadlocks)
+- [ ] [pass argument to thread](pass_argument)
+- [ ] [return value from thread](return_value)
+
 - [ ] ...
