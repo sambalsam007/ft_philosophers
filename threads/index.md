@@ -1,11 +1,10 @@
 # THREADS
 ## Single threading (normal)
-<img src="single_threading.jpeg" style="width:100%;"/>
-![](single_threading.jpeg =200x)
+<img src="single_threading.jpeg" style="width:500px; display:block;"/>
 
 ## Multi threading 
 Used for doing multiple things at the **same time**.
-<img src="multi_threading.jpeg" style="width:50%;"/>
+<img src="multi_threading.jpeg" style="width:500px; display:block;"/>
 
 ## When to use & Why (examples)
 ### Multi-threaded web server:  
@@ -63,4 +62,4 @@ if (pthread_join(...) != 0)
     return 1;
 }
 ```
-[race conditions](../race_conditions), [deadlock](../deadlock).
+[race conditions](../race_conditions), [deadlocks](../deadlocks).

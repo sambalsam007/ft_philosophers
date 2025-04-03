@@ -3,5 +3,7 @@
 If I made a mistake, please let me know in the [issues tab](https://github.com/sambalsam007/ft_philosophers/issues).
 
 # Concepts
-- [ ] [threads](threads)
+- [x] [threads](threads)
+- [ ] [race conditions](race_conditions)
+- [ ] [deadlocks](deadlocks)
 - [ ] ...
