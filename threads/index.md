@@ -1,10 +1,10 @@
 # THREADS
 ## Single threading (normal)
-![single threading](single_threading.jpeg)
+<img src="single_threading.jpeg" style="width:100%;"/>
 
 ## Multi threading 
 Used for doing multiple things at the **same time**.
-![multi threading](multi_threading.jpeg)
+<img src="multi_threading.jpeg" style="width:50%;"/>
 
 ## When to use & Why (examples)
 ### Multi-threaded web server:  
