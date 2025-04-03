@@ -1,4 +1,7 @@
 # RACE CONDITIONS
+when multiple threads try to access shared data, at same time.  
+other term
+    :synchronization issue
 ## Demonstration
 ```c
 #include <unistd.h> //write
@@ -35,11 +38,20 @@ int	main(void)
 	return 0;
 }
 ```
-the output will be:  
+the output should be:  
+>DIT IS EEN MOOIE ZIN  
+>que sera sera whatever will be.  
+
+
+but the output will be:  
 >qDuITe  IsSer aEE Ns eMraO OIwEh aZtIeNv  
 >er will be.  
 
 the computer is trying to "type" the 2 sentences at the same time,  
 which results in the scrambled mess.
 
-Real world problem situation: when multiple threads try to access same data.  
+## Producer-consumer example
+one thread (producer) writes data,  
+another thread (consumer) reads it.  
+if the consumer reads before the producer writes,  
+they will get wrong data.

@@ -8,5 +8,6 @@ If I made a mistake, please let me know in the [issues tab](https://github.com/s
 - [ ] [deadlocks](deadlocks)
 - [ ] [pass argument to thread](pass_argument)
 - [ ] [return value from thread](return_value)
+- [ ] [void pointer](void_pointer)
 
 - [ ] ...
