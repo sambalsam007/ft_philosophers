@@ -56,6 +56,7 @@ one thread (producer) writes data,
 another thread (consumer) reads it.  
 if the consumer reads before the producer writes,  
 they will get wrong data.
+<img src="producer_consumer.jpeg" style="width:500px; display:block; margin:20px auto;"/>
 ```c
 #include <stdio.h> //printf
 #include <pthread.h> //pthread...
@@ -91,7 +92,6 @@ int	main(void)
 	return 0;
 }
 ```
-<img src="producer_consumer.jpeg" style="width:500px; display:block; margin:20px auto;"/>
 
 ### 1. A simple solution
 change the position of `pthread_join`  
