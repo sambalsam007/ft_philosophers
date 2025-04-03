@@ -8,9 +8,9 @@ Used for doing multiple things at the **same time**.
 
 ## When to use & Why (examples)
 ### Multi-threaded web server:  
-**NO multi-threading:**  
+**NO multi-threading:**
 Web server handles HTTP request (visitors) one at a time, blocking other visitors.  
-**with multi-threading:**  
+**with multi-threading:**
 Each HTTP request (visitor) is handled by a seperate thread, simulataneously. So multiple visitors can access the web server at the same time. 
 
 ### Optimizing performance.
