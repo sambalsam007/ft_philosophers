@@ -1,10 +1,10 @@
 # THREADS
 ## Single threading (normal)
-<img src="single_threading.jpeg" style="width:500px; display:block;"/>
+<img src="single_threading.jpeg" style="width:500px; display:block; margin:20px auto;"/>
 
 ## Multi threading 
 Used for doing multiple things at the **same time**.
-<img src="multi_threading.jpeg" style="width:500px; display:block;"/>
+<img src="multi_threading.jpeg" style="width:500px; display:block; margin:20px auto;"/>
 
 ## When to use & Why (examples)
 ### Multi-threaded web server:  
